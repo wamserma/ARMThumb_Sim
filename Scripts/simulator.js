@@ -562,7 +562,7 @@ app.service('simulator', [function () {
         switch(R){
           case 0:
 
-          for (var i = ArrayLength ; i >= 0; i--) {
+          for (var i = ArrayLength-1 ; i >= 0; i--) {
             // Memory[SP] = RListArray[i];
             scope.memory.storeWord(scope.sp,scope.regs[RListArray[i]]);
             scope.sp-=4;
@@ -571,7 +571,7 @@ app.service('simulator', [function () {
 
           break;
           case 1:
-          for (var i = ArrayLength; i >= 0; i--) {
+          for (var i = ArrayLength-1; i >= 0; i--) {
              scope.memory.storeWord(scope.sp,scope.regs[RListArray[i]]);
              scope.sp-=4;
           }
